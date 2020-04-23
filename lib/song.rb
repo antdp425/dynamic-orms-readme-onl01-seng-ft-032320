@@ -1,5 +1,6 @@
 require_relative "../config/environment.rb"
 require 'active_support/inflector'
+require 'pry'
 
 class Song
 
@@ -39,6 +40,7 @@ class Song
 
   def table_name_for_insert
     self.class.table_name
+    binding.pry
   end
 
   def values_for_insert
